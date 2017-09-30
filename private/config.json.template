@@ -4,7 +4,7 @@
     "password": "hunter2"
   },
   "github": {
-    "enable": false,
+    "enable": true,
     "clientId": "github-client-id",
     "secret": "github-secret"
   },
