@@ -5,10 +5,10 @@ node_js:
 
 script:
 - curl https://install.meteor.com/ | sh
-- meteor build .
+# - meteor build .
 
 after_success: 
-- "rm -rf ./.meteor/local"
+# - "rm -rf ./.meteor/local"
 env:
   global:
   - secure: R7QDyr+EbQ9c6cSEidsUx61ELirubeEQZWSEEd+EIlDaEJA1zcbEN3APUiZSp9gA5V3ZYAKhJoAR1D2cKIs80SIwQrLgqVpTaokfDmKaMJL0gfZFCipwC8flJrjIFWG/aBkSaamfub5QuRk49+U2wHrVgQeM4+I03FH+U4dB65RghzacVaDepQ0dEjicVc07I4el/OMV99rr30EiMnbNJzHXD1rrg/jA7RDdKuEZYINIThjCtaOAeaCR8HVYW4gRTNnkAUC3VO+ynlX2clfLSFs09Ofb01QDTt0lN/KIpxcLRR3Nqy509bHtiCIpbktUuS38C+FThrFYwHipeHrcWgKfGtz8GlRuoiELoNcv+0nclt+kTlZslhQoIe+S8GNgOJIjzjRMZJMZiEDUaqznXQ8ezlJ97HbyYjJzSfiMiFNnDmmf/cMhAuR6IIOqdS85pOZxStunyBpQkz3Ip8qBe8I/MZe5bPju2lL/QH8DVIi/HNHIOjJq9a455OQQaJZhLlNKalE9y5ZvQFiTVQ41n+eoMwUjSy5UyVS0lLvPehYX0TWfWusGMrgQOWM5GkjwLAmme5TfVUH13I2ryHMULQi55c0fVoQBAuRJseusW8iVuB+tCvaYhsH3dLxj2+KTqsXEXUqtGbqnC/xF80jWc3Z5y7I7+6W0gBgagGJw/DI=
@@ -20,9 +20,10 @@ env:
   - CF_ORGANIZATION: andres.villa
   - CF_SPACE: dev
 
-before_deploy: npm install -g https://github.com/andresvilla/cf-blue-green
+# before_deploy: npm install -g https://github.com/andresvilla/cf-blue-green
 deploy:
   provider: script
+  script: scripts/deploy.sh
   on:
     all_branches: true
-  script: scripts/deploy.sh
+  skip_cleanup: true
