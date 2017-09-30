@@ -11,6 +11,7 @@ after_success:
 # - "rm -rf ./.meteor/local"
 - curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
 - bx api https://api.ng.bluemix.net
+- cp ./private/config.json.template config.json
 - bx login
 - bx target -o andres.villa -s dev
 - bx cf push
