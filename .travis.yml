@@ -5,7 +5,7 @@ node_js:
 
 script:
 - curl https://install.meteor.com/ | sh
-- meteor build 
+- meteor build .
 
 after_success: 
 - "rm -rf ./.meteor/local"
