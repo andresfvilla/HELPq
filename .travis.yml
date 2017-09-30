@@ -20,13 +20,13 @@ env:
   - CF_ORGANIZATION: andres.villa
   - CF_SPACE: dev
 
-before_deploy: npm install -g https://github.com/germanattanasio/cf-blue-green
+before_deploy: npm install -g https://github.com/andresvilla/cf-blue-green
 deploy:
   provider: script
   script:
     - cf-blue-green-travis
   on:
-    branch: master
+    branch: travis_work
     repo: andresfvilla/HELPq
   skip_cleanup: true
 notifications:
