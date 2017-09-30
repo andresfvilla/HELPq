@@ -25,9 +25,5 @@ deploy:
   provider: script
   script:
     - cf-blue-green-travis
-  on:
-    branch: travis_work
-    repo: andresfvilla/HELPq
-  skip_cleanup: true
 notifications:
   email: false
