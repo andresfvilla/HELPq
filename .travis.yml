@@ -25,5 +25,4 @@ deploy:
   provider: script
   on:
     all_branches: true
-  script:
-    - cf-blue-green-travis
+  script: scripts/deploy.sh
