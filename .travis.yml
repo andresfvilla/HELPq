@@ -26,6 +26,7 @@ env:
   - BX_API: https://api.ng.bluemix.net
   - BX_ORGANIZATION: andres.villa
   - BX_SPACE: dev
+  - BX_SLEEP: 10
 
 before_deploy: npm install -g https://github.com/andresfvilla/bx-blue-green
 deploy:
