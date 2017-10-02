@@ -9,12 +9,12 @@ script:
 
 after_success: 
 # - "rm -rf ./.meteor/local"
-- curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
-- bx api https://api.ng.bluemix.net
-- cp ./private/config.json.template ./private/config.json
-- bx login
-- bx target -o andres.villa -s dev
-- bx cf push
+# - curl -fsSL https://clis.ng.bluemix.net/install/linux | sh
+# - bx api https://api.ng.bluemix.net
+# - cp ./private/config.json.template ./private/config.json
+# - bx login
+# - bx target -o andres.villa -s dev
+# - bx cf push
 
 env:
   global:
@@ -27,10 +27,10 @@ env:
   - CF_ORGANIZATION: andres.villa
   - CF_SPACE: dev
 
-# before_deploy: npm install -g https://github.com/andresvilla/cf-blue-green
-# deploy:
-#   provider: script
-#   script: scripts/deploy.sh
-#   on:
-#     all_branches: true
-#   skip_cleanup: true
+before_deploy: npm install -g https://github.com/andresvilla/bx-blue-green
+deploy:
+  provider: script
+  script: scripts/deploy.sh
+  on:
+    all_branches: true
+  skip_cleanup: true
