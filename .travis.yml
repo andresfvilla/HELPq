@@ -30,7 +30,8 @@ env:
 before_deploy: npm install -g https://github.com/andresfvilla/bx-blue-green
 deploy:
   provider: script
-  script: scripts/deploy.sh
+  script: 
+    - bx-blue-green-travis
   on:
     all_branches: true
   skip_cleanup: true
