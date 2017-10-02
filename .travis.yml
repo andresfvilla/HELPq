@@ -27,7 +27,7 @@ env:
   - BX_ORGANIZATION: andres.villa
   - BX_SPACE: dev
 
-before_deploy: npm install -g https://github.com/andresfvilla/bx-blue-green#bluemix_switch
+before_deploy: npm install -g https://github.com/andresfvilla/bx-blue-green
 deploy:
   provider: script
   script: 
