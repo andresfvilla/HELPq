@@ -27,7 +27,7 @@ env:
   - CF_ORGANIZATION: andres.villa
   - CF_SPACE: dev
 
-before_deploy: npm install -g https://github.com/andresvilla/bx-blue-green
+before_deploy: npm install -g https://github.com/andresfvilla/bx-blue-green
 deploy:
   provider: script
   script: scripts/deploy.sh
